@@ -3,7 +3,7 @@ FROM golang:alpine as builder
 ADD . /go/src/flagbit/analytics_exporter
 WORKDIR /go/src/flagbit/analytics_exporter
 
-RUN apk --no-cache add curl \
+RUN apk --no-cache add curl git \
   && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
   && dep ensure
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o dist/analytics_exporter .
