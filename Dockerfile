@@ -15,9 +15,9 @@ COPY --from=builder /go/src/flagbit/analytics_exporter/dist/analytics_exporter /
 ADD ca-certificates.crt /etc/ssl/certs/
 
 ENV SCRAPE_PORT=9090 
-ENV VIEW_ID='ga:117185506' 
+ENV VIEW_ID='' 
 ENV VIEW_METRICS='rt:activeUsers,ga:sessions' 
 ENV INTERVAL=15 
-ENV START_DATE='2019-01-01'
+ENV START_DATE='2010-01-01'
 
 ENTRYPOINT [ "/analytics_exporter" ]
