@@ -1,0 +1,15 @@
+[[constraint]]
+  name = "github.com/prometheus/client_golang"
+  version = "0.9.2"
+
+[[constraint]]
+  branch = "master"
+  name = "golang.org/x/oauth2"
+
+[[constraint]]
+  name = "google.golang.org/api"
+  version = "0.3.2"
+
+[prune]
+  go-tests = true
+  unused-packages = true
